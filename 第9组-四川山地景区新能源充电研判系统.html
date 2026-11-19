@@ -200,6 +200,9 @@
   .eng-row .tag{margin-left:auto;font-size:8.5px;color:var(--txt3);white-space:nowrap}
   .popR .p-bd{overflow-y:auto}
   .popR .rp .p-hd{height:32px;padding:0 11px}
+  /* 工作台页签多一个收起按钮，收紧左右间距，五个页签宽度基本不变 */
+  #rp-work .p-hd{gap:5px;padding-right:8px}
+  #rp-work .p-hd .pmin{margin-left:0}
   .popR .rp .p-bd{padding:9px 11px;gap:7px}
   .popL .site{flex:1 1 0;min-height:0}
   /* 底部一体化：图例(220) | 负荷曲线(588) | 空桩预测(314)，三块同高 216、同底线 12 */
@@ -431,7 +434,7 @@
     color:rgba(198,216,232,.66);transition:.12s}
   .sm-bay.free{background:rgba(79,214,196,.26);border:1px solid rgba(120,236,218,.72);color:#e0fffb}
   .sm-bay.chg{background:rgba(46,230,168,.30);border:1px solid rgba(86,244,190,.80);color:#e6fff7}
-  .sm-bay.full{background:rgba(251,191,36,.2);border:1px solid rgba(251,191,36,.5);color:#ffe1a6}
+  .sm-bay.full{background:rgba(251,191,36,.42);border:1px solid rgba(251,191,36,.85);color:#fff3cf}
   .sm-bay.fault{background:rgba(255,90,104,.22);border:1px solid rgba(255,90,104,.55);color:#ffc2c8}
   .sm-bay.ordfree{border:1px dashed rgba(46,230,168,.45);background:rgba(46,230,168,.07);color:rgba(166,246,211,.8)}
   .sm-bay.occ{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);color:rgba(176,198,218,.55)}
@@ -903,6 +906,7 @@
             <button class="wb-tab" data-tab="ops">运维</button>
             <button class="wb-tab" data-tab="match">匹配</button>
           </div>
+          <button class="pmin" title="收起/展开">–</button>
         </div>
         <div class="p-bd">
           <div class="pv" id="pv-queue"><div id="queueBox"></div></div>
@@ -1392,7 +1396,7 @@ function siteModalHTML(si) {
         '<div class="sm-lg">' +
           '<span><i style="background:rgba(79,214,196,.65)"></i>空闲可充</span>' +
           '<span><i style="background:rgba(46,230,168,.8)"></i>充电中</span>' +
-          '<span><i style="background:rgba(251,191,36,.6)"></i>已充满占位</span>' +
+          '<span><i style="background:rgba(251,191,36,.75)"></i>已充满占位</span>' +
           '<span><i style="background:rgba(255,90,104,.65)"></i>故障/维护</span>' +
           '<span><i style="background:rgba(46,230,168,.1);border:1px dashed rgba(46,230,168,.6)"></i>普通空位</span>' +
           '<span><i style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16)"></i>普通车位已停</span>' +
